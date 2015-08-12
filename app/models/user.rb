@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 #    spec     =   resolver.spec(:replica)
 #    connection_pool = ActiveRecord::ConnectionAdapters::ConnectionPool.new(spec)
 
-    x = User.where(id: 55).using(:replica)[0]
+#    x = User.where(id: 55).using(:replica)[0]
 
     HR::SwitchDatabase.use :replica do
       u = User.new({name: "Mihir", location:"replica"})

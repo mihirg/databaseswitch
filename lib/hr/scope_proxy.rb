@@ -13,6 +13,7 @@ module HR
 
     def connection
       @klass.connection_proxy.current_model = @klass
+      @klass.connection_proxy.current_replica = @replica_name
       @klass.connection_proxy
     end
 
