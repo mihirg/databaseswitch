@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    User.using.do_work
+    User.do_work
   end
 end

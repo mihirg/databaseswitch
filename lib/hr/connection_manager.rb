@@ -25,6 +25,10 @@ module HR
       @connection_pool_wrapper = ConnectionPoolWrapper.new @connection_pool
     end
 
+    def get_connection_proxy db_name, klass
+      return HR::ConnectionProxy.new @connection_pool, klass
+    end
+
     def get db_name, &block
       if block_given?
         yield @connection_pool_wrapper

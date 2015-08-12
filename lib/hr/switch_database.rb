@@ -11,5 +11,9 @@ module HR
       @balancer.current_connection
     end
 
+    def self.get_connection_proxy db_name, klass
+      @balancer.get_connection_proxy db_name, klass
+    end
+
   end
 end
